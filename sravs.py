@@ -1,6 +1,6 @@
 import cv2
 import mediapipe as mp
-import pyautogui
+import pyautogui  
 import time
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands()
