@@ -36,7 +36,7 @@ while True:
         cv2.putText(img, "UNLOCKED!", (200, 200),
                     cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
     cv2.imshow("Hand Gesture Unlock", img)
-    if cv2.waitKey(1) & 0xFF == 27:  # Press ESC to exit
+    if cv2.waitKey(1) & 0xFF == 27:
         break
 cap.release()
 cv2.destroyAllWindows()
