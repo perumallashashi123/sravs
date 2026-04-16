@@ -5,7 +5,7 @@ hands = mp_hands.Hands()
 mp_draw = mp.solutions.drawing_utils
 def count_fingers(hand_landmarks):
     tips = [4, 8, 12, 16, 20]
-    fingers = []
+    fingers = []    
     if hand_landmarks.landmark[tips[0]].x < hand_landmarks.landmark[tips[0] - 1].x:
         fingers.append(1)
     else:
@@ -14,7 +14,7 @@ def count_fingers(hand_landmarks):
         if hand_landmarks.landmark[tips[i]].y < hand_landmarks.landmark[tips[i] - 2].y:
             fingers.append(1)
         else:
-            fingers.append(0)
+         fingers.append(0)
     return sum(fingers)
 cap = cv2.VideoCapture(0)
 unlocked = False
